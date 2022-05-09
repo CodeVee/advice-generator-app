@@ -66,6 +66,8 @@ body, html {
     &__dice {
         width: 6.4rem;
         height: 6.4rem;
+        border: none;
+        outline: none;
         background: $neon-green;
         display: flex;
         justify-content: center;

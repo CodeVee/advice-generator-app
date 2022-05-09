@@ -49,6 +49,8 @@ body, html {
 .advice__dice {
   width: 6.4rem;
   height: 6.4rem;
+  border: none;
+  outline: none;
   background: hsl(150deg, 100%, 66%);
   display: flex;
   justify-content: center;
