@@ -1,0 +1,132 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+$font-manrope: 'Manrope', sans-serif;
+$fw-800: 800;
+$fs-10: 10px;
+
+$mobile: 375px;
+$mobile-wide: 414px;
+$desktop: 1280px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-manrope;
+}
+
+.main {
+    height: 100vh;
+    background: $dark-blue;
+    display: flex;
+    padding-top: 22.3rem;
+    justify-content: center;
+}
+
+.advice {
+    width: 54rem;
+    height: 33.2rem;
+    background: $dark-grayish-blue;
+    padding: 4.8rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__id {
+        font-size: 1.3rem;
+        font-weight: $fw-800;
+        line-height: 1.8rem;
+        letter-spacing: .409rem;
+        color: $neon-green;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin: 2.4rem 0 4rem;
+        font-size: 2.79rem;
+        line-height: 3.825rem;
+        color: $light-cyan;
+        font-weight: $fw-800;
+    }
+
+    > img.mobile {
+        display: none;
+    }
+
+    &__dice {
+        width: 6.4rem;
+        height: 6.4rem;
+        background: $neon-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -3.2rem;
+        align-self: center;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 4rem $neon-green;
+        }
+    }
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: 8.89px;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: 11.04px;
+    }
+
+    .main {
+        padding-top: 12rem;
+    }
+    
+    .advice {
+        width: 34.3rem;
+        height: 31.5rem;
+        padding: 4rem 2.4rem;
+        border-radius: 1rem;
+    
+        &__id {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+            letter-spacing: .346rem;
+        }
+    
+        &__text {
+            margin: 2.4rem 0;
+            font-size: 2.4rem;
+            line-height: 3.3rem;
+        }
+
+        > img.desktop {
+            display: none;
+        }
+
+        > img.mobile {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
