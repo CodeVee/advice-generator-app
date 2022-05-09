@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 10px;
+  font-family: "Manrope", sans-serif;
+}
+
+.main {
+  height: 100vh;
+  background: hsl(218deg, 23%, 16%);
+  display: flex;
+  padding-top: 22.3rem;
+  justify-content: center;
+}
+
+.advice {
+  width: 54rem;
+  height: 33.2rem;
+  background: hsl(217deg, 19%, 24%);
+  padding: 4.8rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.advice__id {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.8rem;
+  letter-spacing: 0.409rem;
+  color: hsl(150deg, 100%, 66%);
+  text-transform: uppercase;
+}
+.advice__text {
+  margin: 2.4rem 0 4rem;
+  font-size: 2.79rem;
+  line-height: 3.825rem;
+  color: hsl(193deg, 38%, 86%);
+  font-weight: 800;
+}
+.advice > img.mobile {
+  display: none;
+}
+.advice__dice {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: hsl(150deg, 100%, 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3.2rem;
+  align-self: center;
+  cursor: pointer;
+}
+.advice__dice:hover {
+  box-shadow: 0px 0px 4rem hsl(150deg, 100%, 66%);
+}
+
+@media screen and (max-width: 1280px) {
+  body, html {
+    font-size: 8.89px;
+  }
+}
+@media screen and (max-width: 414px) {
+  body, html {
+    font-size: 11.04px;
+  }
+
+  .main {
+    padding-top: 12rem;
+  }
+
+  .advice {
+    width: 34.3rem;
+    height: 31.5rem;
+    padding: 4rem 2.4rem;
+    border-radius: 1rem;
+  }
+  .advice__id {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.346rem;
+  }
+  .advice__text {
+    margin: 2.4rem 0;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+  }
+  .advice > img.desktop {
+    display: none;
+  }
+  .advice > img.mobile {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 375px) {
+  body, html {
+    font-size: 10px;
+  }
+}
