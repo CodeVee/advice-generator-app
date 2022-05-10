@@ -22,7 +22,7 @@ const getAdvice = async (firstLoad) => {
     adviceIdEle.innerText = advice.id;
 
     const adviceIdTextEle = document.getElementById(adviceText);
-    adviceIdTextEle.innerText = advice.advice;
+    adviceIdTextEle.innerText = `“${advice.advice}”`;
 }
 
 document.addEventListener('DOMContentLoaded', handler);
